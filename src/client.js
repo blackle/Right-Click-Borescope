@@ -148,11 +148,7 @@ chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
 	borescope_modal_list.id = "BLACKLE__borescope_modal_list";
 	borescope_modal.appendChild(borescope_modal_list);
 
-	console.log(images);
-
 	for (const image of images) {
-		console.log(image);
-
 		let imageEl = document.createElement("a");
 		imageEl.href = image;
 		imageEl.target = "_blank"
