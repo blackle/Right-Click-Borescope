@@ -1,10 +1,12 @@
-![CC0 license badge](https://licensebuttons.net/p/zero/1.0/88x31.png)
+![Right-Click Borescope logo and slogan](https://user-images.githubusercontent.com/3506025/160611521-449c1687-0d47-4135-b307-645d0a6c062b.png)
 
 # Right-Click Borescope
 
-> Drill down into your web pages, find hidden treasure.
+![CC0 license badge](https://licensebuttons.net/p/zero/1.0/88x31.png)
 
-![ezgif-5-37d1d45304](https://user-images.githubusercontent.com/3506025/160599764-f8efe1cb-e103-4a78-9f9b-beefd8f4913d.gif)
+> Dig into web pages, find hidden treasure.
+
+![Animation showing usage, described further below.](https://user-images.githubusercontent.com/3506025/160599764-f8efe1cb-e103-4a78-9f9b-beefd8f4913d.gif)
 
 
 This is a simple chrome add-on that lists all the images under your mouse cursor. Simply right-click and hit "Right-Click Borescope." A modal will pop up that lists all the discovered images.
@@ -13,6 +15,6 @@ Use this to get around the dirty tricks that stop us from clicking "open image i
 
 PRs welcome.
 
-## license
+### License
 
 This software is public domain
