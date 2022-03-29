@@ -1,5 +1,7 @@
 ![Right-Click Borescope logo and slogan](https://user-images.githubusercontent.com/3506025/160611521-449c1687-0d47-4135-b307-645d0a6c062b.png)
 
+[Chrome WebStore](https://chrome.google.com/webstore/detail/right-click-borescope/mmdokamaalplkfiddbkhpfjmkhecbcnh?hl=en&authuser=0)
+
 # Right-Click Borescope
 
 ![CC0 license badge](https://licensebuttons.net/p/zero/1.0/88x31.png)
