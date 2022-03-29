@@ -1,13 +1,13 @@
 'use strict';
 
+let position = {x: -1, y: -1};
 document.addEventListener('mousedown', e => {
 	if (e.button == 2) {
-		var p = {x: e.clientX, y: e.clientY};
-		chrome.runtime.sendMessage(p, response => {});
+		position = {x: e.clientX, y: e.clientY};
 	}
 });
 
-chrome.runtime.onMessage.addListener((position, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
 	sendResponse({status: 'ok'});
 
 	let images = [];
@@ -31,8 +31,7 @@ chrome.runtime.onMessage.addListener((position, sender, sendResponse) => {
 
 	let container = document.createElement("div");
 	container.id = "BLACKLE__borescope_container";
-	// const containerStyle = "background: rgba(0,0,0,.4) !important;position: absolute !important;top: 0 !important;left: 0 !important;right: 0 !important;bottom: 0 !important;z-index: 999999999 !important;display: grid !important;place-items: center !important;";
-	// container.setAttribute("style", containerStyle);
+
 	container.innerHTML = `
 	<style>
 #BLACKLE__borescope_container, #BLACKLE__borescope_container * {

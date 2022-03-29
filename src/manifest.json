@@ -2,7 +2,7 @@
   "name": "Right-Click Borescope",
   "version": "0.1",
   "description": "List all images under cursor",
-  "permissions": ["contextMenus", "storage"],
+  "permissions": ["contextMenus"],
   "content_security_policy": {
   	"extension_pages": "script-src 'self'; object-src 'self'"
   },
