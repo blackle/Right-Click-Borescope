@@ -1,6 +1,6 @@
 {
   "name": "Right-Click Borescope",
-  "version": "0.1",
+  "version": "0.0.1",
   "description": "List all images under cursor",
   "permissions": ["contextMenus"],
   "content_security_policy": {
