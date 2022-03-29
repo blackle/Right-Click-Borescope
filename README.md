@@ -4,7 +4,7 @@
 
 ![CC0 license badge](https://licensebuttons.net/p/zero/1.0/88x31.png)
 
-> Dig into web pages, find hidden treasure.
+> Dig into web pages, find buried treasure.
 
 ![Animation showing usage, described further below.](https://user-images.githubusercontent.com/3506025/160599764-f8efe1cb-e103-4a78-9f9b-beefd8f4913d.gif)
 
