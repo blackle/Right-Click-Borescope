@@ -3,20 +3,20 @@
   "version": "0.0.1",
   "description": "List all images under your cursor, even ones hidden by other elements",
   "permissions": ["contextMenus"],
-  "content_security_policy": {
-  	"extension_pages": "script-src 'self'; object-src 'self'"
-  },
+  "content_security_policy": "script-src 'self'; object-src 'self'",
   "background": {
-    "service_worker": "background.js"
+    "scripts": [ "background.js" ]
   },
   "content_scripts": [{
-    "matches": ["http://*/*", "https://*/*"],
-    "js": ["client.js"],
+    "matches": [ "*://*/*" ],
+    "js": [ "client.js" ],
     "run_at": "document_end",
     "all_frames": true
   }],
-  "icons": { "16": "img/icon16.png",
-           "48": "img/icon48.png",
-          "128": "img/icon128.png" },
-  "manifest_version": 3
+  "icons": {
+     "16": "img/icon16.png",
+     "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "manifest_version": 2
 }
