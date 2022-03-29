@@ -1,7 +1,7 @@
 {
   "name": "Right-Click Borescope",
   "version": "0.0.1",
-  "description": "List all images under cursor",
+  "description": "List all images under your cursor, even ones hidden by other elements",
   "permissions": ["contextMenus"],
   "content_security_policy": {
   	"extension_pages": "script-src 'self'; object-src 'self'"
