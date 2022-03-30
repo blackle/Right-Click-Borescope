@@ -8,7 +8,7 @@ def make_package(filename, manifest_version):
 		files = glob("./src/**", recursive=True)
 		for file in files:
 			arcname = file.replace("./src/", "", 1)
-			if (arcname == ""):
+			if (arcname == "" or arcname == "manifest.json"):
 				continue
 
 			match = re.match(r"^manifest\.(\d+)\.json$", arcname)
