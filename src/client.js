@@ -7,6 +7,23 @@ document.addEventListener('mousedown', e => {
 	}
 });
 
+function parsePictureNode(element) {
+	const urls = new Set();
+
+	element.childNodes.forEach(childNode => {
+		if (!childNode.srcset) return;
+
+		childNode.srcset.split(',').forEach(src => {
+			const [url] = src.trim().split(' ');
+			if (url) {
+				urls.add(url);
+			}
+		});
+	});
+
+	return Array.from(urls.values());
+}
+
 chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
 	sendResponse({status: 'ok'});
 
@@ -18,6 +35,9 @@ chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
 	}).forEach(e => {
 		if (typeof e.src !== "undefined") {
 			images.push(e.src);
+		}
+		if (e.tagName.toLowerCase() === 'picture') {
+			images.push(...parsePictureNode(e));
 		}
 		const style = window.getComputedStyle(e, false);
 		if (typeof style !== "undefined") {
