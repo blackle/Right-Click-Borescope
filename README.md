@@ -1,6 +1,7 @@
 ![Right-Click Borescope logo and slogan](https://user-images.githubusercontent.com/3506025/160611521-449c1687-0d47-4135-b307-645d0a6c062b.png)
 
-[Chrome WebStore](https://chrome.google.com/webstore/detail/right-click-borescope/mmdokamaalplkfiddbkhpfjmkhecbcnh?hl=en&authuser=0)
+[![UV4C4ybeBTsZt43U4xis](https://user-images.githubusercontent.com/3506025/160849983-727d860d-70cc-44ab-8a55-ee959bfd352b.png)](https://chrome.google.com/webstore/detail/right-click-borescope/mmdokamaalplkfiddbkhpfjmkhecbcnh?hl=en&authuser=0) [![get-the-addon-small](https://user-images.githubusercontent.com/3506025/160850165-9177994e-f626-42a2-b343-0c99f96607d6.png)
+](https://addons.mozilla.org/addon/right-click-borescope/)
 
 # Right-Click Borescope
 
@@ -18,7 +19,7 @@ PRs welcome.
 
 ### Installing
 
-Use the "package.py" script to generate the borescope.chrome.zip and borescope.firefox.zip files. These can then be loaded into your web browser. Or, you can install them from the respective web store/add-on repository. (Firefox pending)
+Use the "package.py" script to generate the borescope.chrome.zip and borescope.firefox.zip files. These can then be loaded into your web browser. Or, you can install them from the respective web store/add-on repository.
 
 ### License
 
