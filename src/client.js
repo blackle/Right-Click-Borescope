@@ -7,18 +7,27 @@ document.addEventListener('mousedown', e => {
 	}
 });
 
+function parseSrcSet(element) {
+	const urls = new Set();
+	if (!element.srcset) return [];
+
+	element.srcset.split(', ').forEach(src => {
+		const [url] = src.trim().split(' ');
+		if (url) {
+			urls.add(url);
+		}
+	});
+	return Array.from(urls.values());
+}
+
 function parsePictureNode(element) {
 	const urls = new Set();
 
 	element.childNodes.forEach(childNode => {
-		if (!childNode.srcset) return;
-
-		childNode.srcset.split(',').forEach(src => {
-			const [url] = src.trim().split(' ');
-			if (url) {
-				urls.add(url);
-			}
-		});
+		const srcsetUrls = parseSrcSet(childNode);
+		if (srcsetUrls.length > 0) {
+			urls.add(...srcsetUrls);
+		}
 	});
 
 	return Array.from(urls.values());
@@ -39,6 +48,7 @@ chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
 		if (e.tagName.toLowerCase() === 'picture') {
 			images.push(...parsePictureNode(e));
 		}
+		images.push(...parseSrcSet(e));
 		const style = window.getComputedStyle(e, false);
 		if (typeof style !== "undefined") {
 			const bg = style["background-image"] || "";
