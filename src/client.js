@@ -151,13 +151,31 @@ chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
 	}`;
 	container.appendChild(style);
 
+	function handleEscapeKey(e) {
+		if(e.key === "Escape") {
+			destroy();
+		}
+	}
+
+	function destroy() {
+		document.body.removeEventListener("keydown", handleEscapeKey);
+		document.body.removeChild(container);
+	}
+
+	container.addEventListener("click", (e) => {
+		if(e.target.id === "BLACKLE__borescope_container") {
+			destroy();
+		}
+	});
+	document.body.addEventListener("keydown", handleEscapeKey);
+
 	let borescope_modal = document.createElement("div");
 	borescope_modal.id = "BLACKLE__borescope_modal";
 	container.appendChild(borescope_modal);
 
 	let borescope_modal_close = document.createElement("div");
 	borescope_modal_close.id = "BLACKLE__borescope_modal_close";
-	borescope_modal_close.addEventListener("click", (e) => document.body.removeChild(container));
+	borescope_modal_close.addEventListener("click", destroy);
 	borescope_modal.appendChild(borescope_modal_close);
 
 	let borescope_modal_h1 = document.createElement("h1");
