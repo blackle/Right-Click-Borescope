@@ -51,10 +51,10 @@ chrome.runtime.onMessage.addListener((data, sender, sendResponse) => {
 		images.push(...parseSrcSet(e));
 		const style = window.getComputedStyle(e, false);
 		if (typeof style !== "undefined") {
-			const bg = style["background-image"] || "";
-			const image = bg.match(/url\(["']?([^"']*)["']?\)/);
-			if (image) {
-				images.push(image[1]);
+			const styleImages = [];
+			for (const imageProp of ["background-image", "mask-image", "list-style-image", "border-image"]) {
+				style[imageProp].matchAll(/url\(["']?([^"']*)["']?\)/g)
+					.forEach(image => images.push(image[1]));
 			}
 		}
 	});
